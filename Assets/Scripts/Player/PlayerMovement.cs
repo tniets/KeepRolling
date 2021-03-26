@@ -5,14 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Vector2 _direction = Vector2.right;
     [SerializeField] private float _speed;
 
     private Rigidbody2D _rigidBody2D;
 
     private void Awake()
     {
-        _direction.Normalize();
         _rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
