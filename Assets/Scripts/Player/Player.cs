@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int _coinCount;
+    private int _coins;
 
-    public event Action<int> CoinCollected = delegate { };
+    public event Action<int> CoinCollected;
 
     public void AddCoin()
     {
-        _coinCount++;
-        CoinCollected(_coinCount);
+        _coins++;
+        CoinCollected?.Invoke(_coins);
     }
 }
