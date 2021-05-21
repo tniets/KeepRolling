@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6187953714085370506}
-  - component: {fileID: 5104697824331612225}
   - component: {fileID: 5581064636581537241}
   m_Layer: 0
   m_Name: GroundTemplate
@@ -33,18 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5104697824331612225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976931567321428115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465203276f7f73c4dbb3865b32bdd898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5581064636581537241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +55,6 @@ GameObject:
   - component: {fileID: 4302485975359520605}
   - component: {fileID: 329258332887693650}
   - component: {fileID: 1197691310644915553}
-  - component: {fileID: 6856195494762971835}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -167,15 +153,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6856195494762971835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5320365267045452393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465203276f7f73c4dbb3865b32bdd898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

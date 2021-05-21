@@ -118,7 +118,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7109001077430948222}
-  - component: {fileID: 5431583431277790445}
   - component: {fileID: 9135603681270398563}
   m_Layer: 0
   m_Name: ObstacleTemplate2
@@ -156,18 +155,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5431583431277790445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664222900285278745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465203276f7f73c4dbb3865b32bdd898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9135603681270398563
 MonoBehaviour:
   m_ObjectHideFlags: 0
