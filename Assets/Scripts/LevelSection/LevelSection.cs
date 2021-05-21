@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TransformExtensions;
 
-[RequireComponent(typeof(BoundsCalculator))]
 public class LevelSection : MonoBehaviour
 {
     public Bounds Bounds { get; private set; }
 
     private void Awake()
     {
-        Bounds = GetComponent<BoundsCalculator>().CalculateBounds();
+        Bounds = transform.CalculateBounds();
     }
 
     private void OnEnable()
     {
-        Utils.SetAllChildrenActive(transform, true);
+        transform.SetAllChildrenActive(true);
     }
 }

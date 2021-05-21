@@ -21,7 +21,7 @@ public class ObjectPool<T> where T : Component
                 return _pool[i];
         }
 
-        return InstatiateRandomPoolObject();
+        return InstantiateRandomPoolObject();
     }
     
     public T GetRandomObject()
@@ -31,7 +31,7 @@ public class ObjectPool<T> where T : Component
         if (inactiveObjects.Count > 0)
             return inactiveObjects[Random.Range(0, inactiveObjects.Count)];
 
-        return InstatiateRandomPoolObject();
+        return InstantiateRandomPoolObject();
     }
 
     private void InitializePool()
@@ -40,12 +40,12 @@ public class ObjectPool<T> where T : Component
         {
             for (int i = 0; i < poolObject.Count; i++)
             {
-                InstatiatePoolObject(poolObject.Template);
+                InstantiatePoolObject(poolObject.Template);
             }
         }
     }
 
-    private T InstatiatePoolObject(T template)
+    private T InstantiatePoolObject(T template)
     {
         var poolObject = Object.Instantiate(template);
         poolObject.gameObject.SetActive(false);
@@ -55,10 +55,10 @@ public class ObjectPool<T> where T : Component
         return poolObject;
     }
 
-    private T InstatiateRandomPoolObject()
+    private T InstantiateRandomPoolObject()
     {
         var template = _poolObjects[Random.Range(0, _poolObjects.Count)].Template;
-        return InstatiatePoolObject(template);
+        return InstantiatePoolObject(template);
     }
 }
 
