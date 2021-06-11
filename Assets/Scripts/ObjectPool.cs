@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ObjectPool<T> where T : Component
 {
-    private readonly List<PoolObject<T>> _poolObjects;
+    private readonly List<PoolObjectTemplate<T>> _templates;
     private readonly List<T> _pool = new List<T>();
 
-    public ObjectPool(List<PoolObject<T>> _templates)
+    public ObjectPool(List<PoolObjectTemplate<T>> templates)
     {
-        _poolObjects = _templates;
+        _templates = templates;
         InitializePool();
     }
 
@@ -20,7 +20,7 @@ public class ObjectPool<T> where T : Component
             if (!_pool[i].gameObject.activeInHierarchy)
                 return _pool[i];
         }
-
+        
         return InstantiateRandomPoolObject();
     }
     
@@ -36,7 +36,7 @@ public class ObjectPool<T> where T : Component
 
     private void InitializePool()
     {
-        foreach (var poolObject in _poolObjects)
+        foreach (var poolObject in _templates)
         {
             for (int i = 0; i < poolObject.Count; i++)
             {
@@ -57,13 +57,13 @@ public class ObjectPool<T> where T : Component
 
     private T InstantiateRandomPoolObject()
     {
-        var template = _poolObjects[Random.Range(0, _poolObjects.Count)].Template;
+        var template = _templates[Random.Range(0, _templates.Count)].Template;
         return InstantiatePoolObject(template);
     }
 }
 
 [System.Serializable]
-public class PoolObject<T> where T : Component
+public class PoolObjectTemplate<T> where T : Component
 {
     [SerializeField] private T _template;
     [SerializeField] private int _count;

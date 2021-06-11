@@ -3,8 +3,10 @@ using TransformExtensions;
 
 public class LevelSection : MonoBehaviour
 {
+    [SerializeField] private Transform _coinsContainer;
+    
     public Bounds Bounds { get; private set; }
-
+    
     private void Awake()
     {
         Bounds = transform.CalculateBounds();
@@ -12,6 +14,6 @@ public class LevelSection : MonoBehaviour
 
     private void OnEnable()
     {
-        transform.SetAllChildrenActive(true);
+        _coinsContainer.SetAllChildrenActive(true);
     }
 }
