@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TransformExtensions;
 
 public class LevelSection : MonoBehaviour
 {
-    [SerializeField] private Transform _coinsContainer;
+    [SerializeField] private List<GameObject> _coins;
     
     public Bounds Bounds { get; private set; }
     
@@ -14,6 +15,9 @@ public class LevelSection : MonoBehaviour
 
     private void OnEnable()
     {
-        _coinsContainer.SetAllChildrenActive(true);
+        foreach (var coin in _coins)
+        {
+            coin.SetActive(true);
+        }
     }
 }
